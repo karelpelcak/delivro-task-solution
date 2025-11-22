@@ -1,1 +1,3 @@
-[ ] Backend setup
+- [ ] Setup backend
+- [ ] Setup Frontend
+- [ ] Setup Dockerfiles nad docker-compose
