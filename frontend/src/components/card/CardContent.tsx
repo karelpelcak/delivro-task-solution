@@ -1,5 +1,6 @@
 'use client';
 
+import { MoveRight } from 'lucide-react';
 import TravelMode from './TravelMode';
 
 interface ICardContent {
@@ -50,10 +51,16 @@ const CardContent = (data: ICardContent) => {
                 </div>
             </div>
 
-            <div className="text-xs text-gray-600 pt-1 flex justify-between">
-                <span>
-                    {data.shipmentOriginCountry} → {data.shipmentDestinationCountry}
-                </span>
+            <div className="text-xs text-gray-600 pt-1 flex justify-between items-center">
+                <div className='flex items-center gap-2'>
+                    <span>
+                        {data.shipmentOriginCountry}
+                    </span>
+                    <MoveRight strokeWidth={4} width={10} />
+                    <span>
+                        {data.shipmentDestinationCountry}
+                    </span>
+                </div>
                 <span>{formatDate(data.shipmentCreatedAt)}</span>
             </div>
         </div>

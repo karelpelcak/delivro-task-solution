@@ -34,7 +34,10 @@ export const uploadInvoices = async (req: FastifyRequest, reply: FastifyReply) =
 
         const invoice = item;
 
-        const existingInvoice = await db.select().from(invoices).where(eq(invoices.id, invoice.id)).execute();
+        const existingInvoice = await db.select()
+            .from(invoices)
+            .where(eq(invoices.id, invoice.id))
+            .execute();
 
         if (existingInvoice.length > 0) {
             await db
@@ -88,7 +91,8 @@ export const getShipments = async (req: FastifyRequest, reply: FastifyReply) => 
         .leftJoin(invoices, eq(invoices.shipmentId, shipments.id));
 
     const rows = companyId
-        ? await baseQuery.where(eq(shipments.companyId, companyId)).execute()
+        ? await baseQuery.where(eq(shipments.companyId, companyId))
+            .execute()
         : await baseQuery.execute();
 
     const formatted = rows.map((row) => ({

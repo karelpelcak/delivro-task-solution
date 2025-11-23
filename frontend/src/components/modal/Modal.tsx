@@ -34,7 +34,7 @@ const Modal = ({ isOpen, onClose, title, children }: ModalProps) => {
             onClick={handleClickOverlay}
             className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm"
         >
-            <div className="relative w-full max-w-md rounded-xl bg-white p-6 shadow-xl">
+            <div className="relative w-[90%] rounded-xl bg-gray-100 p-6 shadow-xl">
                 {title && <h2 className="mb-4 text-xl font-semibold text-neutral-900">{title}</h2>}
 
                 <div>{children}</div>

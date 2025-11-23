@@ -23,7 +23,7 @@ const ModalWrapper = () => {
                 onClick={() => setOpen(true)}
                 label='Otevřít modal'
             />
-                
+
 
             <Modal isOpen={open} onClose={() => setOpen(false)} title="Ukázkový modal">
                 <p>Ukázkový modal content</p>

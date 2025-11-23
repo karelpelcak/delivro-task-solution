@@ -1,0 +1,28 @@
+{
+    "HomePage": {
+        "Modal": "Přidat faktury",
+        "SelectProvider": "Filtrovat dopravce",
+        "ModalTitle": "Přidat faktury"
+    },
+    "FileUpload": {
+        "errors": {
+            "invalidArray": "JSON musí být pole objektů",
+            "invalidJson": "Neplatný JSON soubor!",
+            "uploadFailed": "Chyba při odesílání souboru"
+        },
+        "messages": {
+            "uploaded": "Nahráno {count} záznamů"
+        },
+        "buttons": {
+            "upload": "Nahrát JSON",
+            "uploading": "Nahrávám..."
+        },
+        "UploadFile": "Nahrát JSON soubor"
+    },
+    "ShipmentDashboard": {
+        "loading": "Načítám data...",
+        "fetchError": "Chyba při načítání dat",
+        "unknownError": "Neznámá chyba",
+        "error": "Chyba"
+    }
+}

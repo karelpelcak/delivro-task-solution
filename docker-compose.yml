@@ -1,4 +1,28 @@
 services:
+  backend:
+    build:
+      context: ./backend
+    container_name: backend
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgres://appuser:secretpassword@postgres:5432/appdb
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: frontend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:8080
+    depends_on:
+      - backend
+
   postgres:
     image: postgres:16
     container_name: postgres

@@ -1,0 +1,31 @@
+{
+    "HomePage": {
+        "Modal": "Add invoices",
+        "SelectProvider": "Filter providers",
+        "ModalTitle": "Add invoices"
+    },
+    "FileUpload": {
+        "errors": {
+            "invalidArray": "JSON must be an array of objects",
+            "invalidJson": "Invalid JSON file!",
+            "uploadFailed": "Error while sending file"
+        },
+        "messages": {
+            "uploaded": "Uploaded {count} records"
+        },
+        "buttons": {
+            "upload": "Upload JSON",
+            "uploading": "Uploading..."
+        },
+        "UploadFile": "Upload JSON file"
+    },
+    "Dropdown": {
+        "placeholder": "Select..."
+    },
+    "ShipmentDashboard": {
+        "loading": "Loading data...",
+        "fetchError": "Error while fetching data",
+        "unknownError": "Unknown error",
+        "error": "Error"
+    }
+}

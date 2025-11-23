@@ -5,20 +5,30 @@ interface IButton {
     className?: string;
     onClick?: () => void;
     icon?: React.ReactNode;
+    disabled?: boolean;
 }
 
-const Button = (props: IButton) => {
+const Button = ({
+    label,
+    className,
+    onClick,
+    icon,
+    disabled = false
+}: IButton) => {
     return (
         <button
-            onClick={props.onClick}
+            onClick={!disabled ? onClick : undefined}
+            disabled={disabled}
             className={clsx(
-                'bg-white px-4 py-2 rounded-lg shadow-lg hover:shadow-xl hover:cursor-pointer',
-                props.className
+                "px-4 py-2 rounded-lg shadow-lg transition-all",
+                !disabled && "bg-white hover:shadow-xl hover:cursor-pointer",
+                disabled && "bg-gray-200 text-gray-500 cursor-not-allowed",
+                className
             )}
         >
             <div className="flex gap-2">
-                {props.icon && <span className="font-bold">{props.icon}</span>}
-                <span>{props.label}</span>
+                {icon && <span className="font-bold">{icon}</span>}
+                <span>{label}</span>
             </div>
         </button>
     );
