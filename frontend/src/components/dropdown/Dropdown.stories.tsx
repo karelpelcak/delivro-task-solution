@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/nextjs';
 import Dropdown from './Dropdown';
-import { Apple, Banana, Carrot, icons } from 'lucide-react';
 import { useState } from 'react';
 
 const meta = {
