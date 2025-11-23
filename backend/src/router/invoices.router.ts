@@ -1,7 +1,7 @@
-import type { FastifyPluginAsync } from 'fastify';
-import { getInvoices, createInvoice } from '../controller/invoices.controller';
+import { FastifyInstance } from "fastify";
+import { uploadInvoices, getShipments } from "../controller/invoices.controller";
 
-const invoicesRouter: FastifyPluginAsync = async (fastify) => {
+export const invoicesRouter = async (fastify: FastifyInstance) => {
+  fastify.post("/upload", uploadInvoices);
+  fastify.get("/shipments", getShipments);
 };
-
-export default invoicesRouter;

@@ -28,6 +28,8 @@ export interface ICard {
 }
 
 const Card = (props: ICard) => {
+    if (!props || !props.shipment) return null;
+
     const variant: Record<IShipment['mode'], string> = {
         IMPORT: 'shadow-blue-300',
         EXPORT: 'shadow-green-300',
@@ -37,7 +39,7 @@ const Card = (props: ICard) => {
             className={clsx(
                 'flex flex-col rounded-2xl bg-white shadow-sm border border-gray-200 overflow-hidden min-h-64',
                 'hover:shadow-md transition-shadow duration-200 shadow-2xl hover:cursor-pointer',
-                variant[props.shipment.mode]
+                props?.shipment?.mode && variant[props.shipment.mode]
             )}
         >
             <CardImage provider={props.shipment.provider} />
