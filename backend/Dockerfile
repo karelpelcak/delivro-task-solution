@@ -11,7 +11,6 @@ COPY tsconfig.json drizzle.config.ts ./
 
 # copy source
 COPY src ./src
-COPY db ./db
 
 # install all dependencies (including devDeps so drizzle-kit is available)
 RUN npm install
