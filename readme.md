@@ -46,6 +46,7 @@ if used docker-compose use this connection URL:
 `postgres://appuser:secretpassword@localhost:5432/appdb`
 
 ```bash
+cd backend
 npm i
 npx drizzle-kit push
 npm run dev
