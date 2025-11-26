@@ -53,7 +53,7 @@ npm run dev
 ```
 This url is for backend:
 ```
-http://localhost:3000
+http://localhost:8080
 ```
 
 ## Run in docker
