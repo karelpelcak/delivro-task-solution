@@ -51,7 +51,7 @@ npm i
 npx drizzle-kit push
 npm run dev
 ```
-This url is for backend:
+This is url for backend:
 ```
 http://localhost:8080
 ```
